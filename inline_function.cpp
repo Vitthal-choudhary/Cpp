@@ -9,7 +9,7 @@ class Student
 	char name[20], address[30];
 	public:
 		void inline getstudent();
-		inline void putstudent();
+		inline void putstudent();		// can be used without inline keyword also. and inline func. executes faste than class func.
 };
 
 void Student::putstudent()
