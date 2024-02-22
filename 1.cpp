@@ -23,7 +23,7 @@ class Sample
 			cout << b << endl;
 		}
 };
-void Sample::b;
+int Sample::b;
 
 main()
 {
