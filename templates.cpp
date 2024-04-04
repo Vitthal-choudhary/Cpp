@@ -2,7 +2,7 @@
 
 using namespace std;
 
-/*
+
 // Function Templates
 template <class t>
 
@@ -24,7 +24,7 @@ main()
 	cout << add(a,b);
 	
 }
-*/
+
 
 // Class Template
 template <class t1, class t2>

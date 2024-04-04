@@ -8,7 +8,7 @@ using namespace std;
 class Base
 {
 	public:
-		void show()
+		void virtual show()
 		{
 			cout << "Showing Base " << endl;
 		}
@@ -34,11 +34,29 @@ main()
 	p->show();
 	
 	p = &d;
-	p->show();
+	p->show();		
 }
 
 /*
 // Solution 2
+
+class Base
+{
+	public:
+		void show()
+		{
+			cout << "Showing Base " << endl;
+		}
+};
+
+class Derived:public Base
+{
+	public:
+		void show()
+		{
+			cout << "Showing Derived\n";
+		}
+};
 main()
 {
 	Derived d;
