@@ -7,6 +7,8 @@ class Address
 {
 	int hno;
 	char city[20], state[20];
+	protected:
+		int x=10;
 	public:
 		void getaddress()
 		{
@@ -24,35 +26,70 @@ class Address
 		}
 };
 
-/*
-class Student : public Address
-{
-	int roll;
-	char name[20];
-	public:
-		void getstudent()
-		{
-			cout << "Enter roll number ";
-			cin >> roll;
-			fflush(stdin);
-			cout << "enter name ";
-			gets(name);
-		}
-		void putstudent()
-		{
-			cout << roll << endl << name << endl;
-		}
-};
-main()
-{
-	Student s;
-	s.getstudent();
-	s.getaddress();
-	s.putstudent();
-	s.putaddress();
-}
-*/
-class Student : private Address
+//                  Public Inheritance
+
+// class Student : public Address
+// {
+// 	int roll;
+// 	char name[20];
+// 	public:
+// 		void getstudent()
+// 		{
+// 			cout << "Enter roll number ";
+// 			cin >> roll;
+// 			fflush(stdin);
+// 			cout << "enter name ";
+// 			gets(name);
+// 		}
+// 		void putstudent()
+// 		{
+// 			cout << roll << endl << name << endl;
+// 		}
+// };
+// main()
+// {
+// 	Student s;
+// 	s.getstudent();
+// 	s.getaddress();
+// 	s.putstudent();
+// 	s.putaddress();
+// }
+
+
+
+//								Private Inheritance
+// class Student : private Address
+// {
+// 	int roll;
+// 	char name[20];
+// 	public:
+// 		void getstudent()
+// 		{
+// 			cout << "Enter roll number ";
+// 			cin >> roll;
+// 			fflush(stdin);
+// 			cout << "enter name ";
+// 			gets(name);
+// 			getaddress();
+// 		}
+// 		void putstudent()
+// 		{
+// 			cout << roll << endl << name << endl;
+// 			putaddress();
+// 		}
+// };
+
+// main()
+// {
+// 	Student s;
+// 	s.getstudent();
+// 	s.putstudent();
+// }
+
+
+//						Private Inheritance
+
+class Student : protected Address
 {
 	int roll;
 	char name[20];
@@ -72,6 +109,7 @@ class Student : private Address
 			putaddress();
 		}
 };
+
 main()
 {
 	Student s;
